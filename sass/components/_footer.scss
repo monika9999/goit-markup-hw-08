@@ -1,0 +1,105 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $tertiaryColorDark;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    @extend .container;
+  }
+
+  &__list {
+    padding-left: 0px;
+    padding-top: 20px;
+    @extend .list;
+  }
+
+  &__item {
+    color: $secondaryColorWhite;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.7;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__address-list-item-link:active {
+    color: $primaryColor;
+  }
+
+  &__description {
+    color: $secondaryColorWhite;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &__socials {
+    margin-left: 70px;
+  }
+
+  &__slist {
+    @extend .list;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__sicon {
+    fill: $secondaryColorWhite;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__sicon:hover,
+  &__sicon:focus,
+  &__sicon:active {
+    background-color: $primaryColor;
+    cursor: pointer;
+  }
+
+  &__newsletter {
+    margin-left: 78px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    color: $secondaryColorWhite;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: $borderRadiusDefault;
+    padding: 15px 16px;
+    transition-property: border;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__input:hover,
+  &__input:active,
+  &__input:focus {
+    border: 1px solid $primaryColor;
+    outline: none;
+  }
+}

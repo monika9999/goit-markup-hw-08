@@ -1,0 +1,103 @@
+.header {
+  border-bottom: #ececec solid 1px;
+
+  &__container {
+    @extend .container;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    @extend .list;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 46px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondaryColorBlack;
+    transition-property: color;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    color: $primaryColor;
+  }
+
+  &__link--is-active {
+    position: relative;
+    color: $primaryColor;
+  }
+
+  &__link--is-active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 43px;
+    width: 100%;
+    height: 4px;
+    background-color: $primaryColor;
+    border-radius: 2px;
+  }
+}
+
+.menu {
+  @extend .list;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: inline;
+    margin-right: 50px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    color: $tertiaryColorGrey;
+    fill: $tertiaryColorGrey;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition-property: color, fill;
+    transition-duration: $transitionDurationDefault;
+    transition-timing-function: $transitionTimingDefault;
+  }
+
+  &__link:hover,
+  &__ink:focus,
+  &__link:active {
+    color: $primaryColor;
+    fill: $primaryColor;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
