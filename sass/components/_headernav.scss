@@ -3,8 +3,7 @@
 
   &__container {
     @extend .container;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 16px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,15 +66,7 @@
   @extend .list;
   display: flex;
   align-items: center;
-
-  &__item {
-    display: inline;
-    margin-right: 50px;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
-  }
+  gap: 50px;
 
   &__link {
     color: $tertiaryColorGrey;
@@ -91,7 +82,7 @@
   }
 
   &__link:hover,
-  &__ink:focus,
+  &__link:focus,
   &__link:active {
     color: $primaryColor;
     fill: $primaryColor;
@@ -99,5 +90,27 @@
 
   &__icon {
     margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .header__menu {
+    margin-left: 93px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu__link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .header {
+    padding: 5px 0;
   }
 }

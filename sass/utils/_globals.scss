@@ -17,7 +17,7 @@ body {
 }
 
 .section {
-  padding-bottom: 94px;
+  padding-bottom: 0;
 }
 
 .section-title {
@@ -29,4 +29,16 @@ body {
 
 .list {
   list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .section {
+    padding-bottom: 94px;
+  }
 }

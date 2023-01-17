@@ -60,6 +60,15 @@
             </a>
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu__icon" width="40" height="40">
+            <use href="images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -139,8 +148,11 @@
               class="offer__image"
               src="images/services/computer.jpg"
               width="370"
-              height="294"
               alt="laptop"
+              srcset="
+                images/services/computer@2x.jpg 2x,
+                images/services/computer@3x.jpg 3x
+              "
             />
             <p class="offer__description">APLIKACJE KOMPUTEROWE</p>
           </li>
@@ -149,8 +161,11 @@
               class="offer__image"
               src="images/services/telephone.jpg"
               width="370"
-              height="294"
               alt="telefon"
+              srcset="
+                images/services/telephone@2x.jpg 2x,
+                images/services/telephone@3x.jpg 3x
+              "
             />
             <p class="offer__description">APLIKACJE MOBILNE</p>
           </li>
@@ -159,8 +174,11 @@
               class="offer__image"
               src="images/services/tablet.jpg"
               width="370"
-              height="294"
               alt="tablet"
+              srcset="
+                images/services/tablet@2x.jpg 2x,
+                images/services/tablet@3x.jpg 3x
+              "
             />
             <p class="offer__description">ROZWIĄZANIA GRAFICZNE</p>
           </li>
@@ -174,8 +192,10 @@
               <img
                 src="images/persons/product-designer.jpg"
                 alt="product designer"
-                width="270"
-                height="260"
+                srcset="
+                  images/persons/product-designer@2x.jpg 2x,
+                  images/persons/product-designer@3x.jpg 3x
+                "
               />
               <figcaption class="team__description">
                 <h3 class="team__name">John Doe</h3>
@@ -226,8 +246,10 @@
               <img
                 src="images/persons/fronted-developer.jpg"
                 alt="frontend developer"
-                width="270"
-                height="260"
+                srcset="
+                  images/persons/fronted-developer@2x.jpg 2x,
+                  images/persons/fronted-developer@3x.jpg 3x
+                "
               />
               <figcaption class="team__description">
                 <h3 class="team__name">John Doe</h3>
@@ -278,8 +300,10 @@
               <img
                 src="images/persons/marketing.jpg"
                 alt="marketing"
-                width="270"
-                height="260"
+                srcset="
+                  images/persons/marketing@2x.jpg 2x,
+                  images/persons/marketing@3x.jpg 3x
+                "
               />
               <figcaption class="team__description">
                 <h3 class="team__name">John Doe</h3>
@@ -330,8 +354,10 @@
               <img
                 src="images/persons/ui-designer.jpg"
                 alt="ui designer"
-                width="270"
-                height="260"
+                srcset="
+                  images/persons/ui-designer@2x.jpg 2x,
+                  images/persons/ui-designer@3x.jpg 3x
+                "
               />
               <figcaption class="team__description">
                 <h3 class="team__name">John Doe</h3>
@@ -420,7 +446,7 @@
     <!-- FOOTER-->
     <footer class="footer">
       <div class="footer__container">
-        <div>
+        <div class="footer__address">
           <a class="logo" href="index.html" title="Strona główna"
             >Web<span class="logo--footer">Studio</span>
           </a>
@@ -565,5 +591,64 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+
+    <!-- MODAL menu  -->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          class="mobile-menu__icon mobile-menu__icon--close"
+          width="40"
+          height="40"
+        >
+          <use href="images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu__content">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="index.html" class="mobile-menu__link">Agencja</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="portfolio.html" class="mobile-menu__link">Portfolio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Kontakt</a>
+          </li>
+        </ul>
+        <div>
+          <p class="mobile-menu__tel">
+            <a href="tel:+48111111111" class="mobile-menu__tel-link"
+              >+48 111 111 111</a
+            >
+          </p>
+          <p class="mobile-menu__mail">
+            <a href="mailto:info@devstudio.com" class="mobile-menu__mail-link"
+              >info@devstudio.com</a
+            >
+          </p>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

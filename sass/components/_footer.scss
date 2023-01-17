@@ -5,8 +5,14 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     @extend .container;
+  }
+
+  &__address {
+    margin-bottom: 60px;
   }
 
   &__list {
@@ -32,7 +38,7 @@
 
   &__link:hover,
   &__link:focus,
-  &__address-list-item-link:active {
+  &__link:active {
     color: $primaryColor;
   }
 
@@ -45,7 +51,8 @@
   }
 
   &__socials {
-    margin-left: 70px;
+    margin-left: 0;
+    margin-bottom: 60px;
   }
 
   &__slist {
@@ -72,18 +79,20 @@
   }
 
   &__newsletter {
-    margin-left: 78px;
+    margin-left: 0;
   }
 
   &__form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 12px;
   }
 
   &__input {
-    width: 358px;
+    width: calc(100vw - 30px);
+    max-width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: transparent;
@@ -101,5 +110,44 @@
   &__input:focus {
     border: 1px solid $primaryColor;
     outline: none;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .footer__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .footer__container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .footer__address {
+    margin-bottom: 0;
+  }
+
+  .footer__socials {
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+
+  .footer__newsletter {
+    margin-left: 78px;
+  }
+
+  .footer__form {
+    flex-direction: row;
+  }
+
+  .footer__input {
+    width: 358px;
   }
 }

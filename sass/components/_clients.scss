@@ -1,28 +1,28 @@
 .clients {
-  padding-top: 94px;
+  padding: 60px 15px;
   text-align: center;
   @extend .section;
   @extend .container;
 
   &__list {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     @extend .list;
   }
 
   &__item {
-    margin-right: 30px;
+    padding: 16px 32px;
     border: 1px solid $tertiaryColorLight;
     border-radius: $borderRadiusDefault;
     display: flex;
+    flex-basis: calc((100% - 30px) / 2);
     justify-content: center;
     align-items: center;
     transition-property: border;
     transition-duration: $transitionDurationDefault;
     transition-timing-function: $transitionTimingDefault;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
   }
 
   &__item:hover {
@@ -39,5 +39,25 @@
 
   &__item:hover &__icon {
     fill: $primaryColor;
+  }
+}
+
+@media screen and (min-width: $breakpointTabletStart) and (max-width: $breakpointTabletEnd) {
+  .clients__item {
+    flex-basis: calc((100% - 40px) / 3);
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .clients {
+    padding-top: 94px;
+  }
+
+  .clients__list {
+    flex-wrap: nowrap;
+  }
+
+  .clients__item {
+    flex-basis: auto;
   }
 }

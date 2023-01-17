@@ -3,7 +3,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   text-decoration: none;
-  margin-right: 93px;
+  margin-right: 0;
 
   &--header {
     color: #000;
@@ -11,5 +11,11 @@
 
   &--footer {
     color: $secondaryColorWhite;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .logo {
+    margin-right: 93px;
   }
 }

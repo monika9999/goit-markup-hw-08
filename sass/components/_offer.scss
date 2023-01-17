@@ -1,4 +1,5 @@
 .offer {
+  display: none;
   text-align: center;
   @extend .section;
   @extend .container;
@@ -10,13 +11,7 @@
   }
 
   &__item {
-    display: inline-block;
-    margin-right: 20px;
     position: relative;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
   }
 
   &__image {
@@ -33,5 +28,11 @@
     width: 370px;
     position: absolute;
     bottom: 0;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktopStart) {
+  .offer__List {
+    display: block;
   }
 }
