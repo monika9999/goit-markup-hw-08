@@ -14,7 +14,7 @@
     position: relative;
   }
 
-  &__image {
+  &__item > &__image {
     display: block;
   }
 
@@ -32,7 +32,7 @@
 }
 
 @media screen and (min-width: $breakpointDesktopStart) {
-  .offer__List {
+  .offer {
     display: block;
   }
 }
