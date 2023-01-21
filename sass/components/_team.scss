@@ -1,5 +1,6 @@
 .team {
   @extend .section;
+  @extend .container;
   text-align: center;
   background-color: #f5f4fa;
   padding: 60px 0;

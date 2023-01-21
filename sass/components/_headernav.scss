@@ -1,5 +1,6 @@
 .header {
   border-bottom: #ececec solid 1px;
+  @extend .container;
 
   &__container {
     @extend .container;
